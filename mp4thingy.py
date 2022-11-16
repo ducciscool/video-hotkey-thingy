@@ -17,6 +17,7 @@ path = pengus + "reen.mp4"
 def ded():
     video=cv2.VideoCapture(path)
     player = MediaPlayer(path)
+    wub = "dog"
     
     while True:
     
@@ -30,7 +31,8 @@ def ded():
         if cv2.waitKey(28) & 0xFF == ord("q"):
             break
      
-        cv2.imshow("dog", frame)
+        cv2.imshow(wub, frame)
+        cv2.setWindowProperty(wub, cv2.WND_PROP_TOPMOST, 1)
         if val != 'eof' and audio_frame is not None:
             img, t = audio_frame
    
